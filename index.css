@@ -1,0 +1,47 @@
+:root{
+    --full-width-without-scrollbars:  calc(100vw - (100vw - 100%));
+}
+
+body {
+    margin: 0;
+}
+
+canvas{
+    height: 80vh;
+    width: var(--full-width-without-scrollbars);
+    border: 1px solid black;
+}
+
+.nav {
+    background: linear-gradient(30deg,hsla(182, 100%, 67%, 1), hsla(262, 100%, 67%, 1), hsla(222, 100%, 67%, 1), hsla(182, 100%, 67%, 1)) ;
+    width: var(--full-width-without-scrollbars);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1), inset 5px 5px 10px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    background-color: hsla(300, 100%, 25%, 0.9);
+    width: 6vh;
+    height: 6vh;
+    border-radius: 20%;
+    margin-left: 5vh;
+    cursor: pointer;
+    box-shadow: inset 5px 5px 10px 10px rgba(255, 255, 255, 0.1), inset -5px -5px 10px 10px rgba(255, 255, 255, 0.1), 3px 3px 3px 3px hsla(300, 100%, 25%, 0.8);
+    border: 1px solid hsla(300, 100%, 25%, 0.2);
+}
+
+.button.active {
+    background-color: hsla(300, 100%, 25%, 0.7);
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 5px 5px 10px 10px rgba(0, 0, 0, .1), inset -5px -5px 10px 10px rgba(0, 0, 0, .1), 3px 3px 3px 3px hsla(300, 100%, 25%, 0.8);
+
+}
+
+.button.svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

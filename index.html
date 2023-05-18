@@ -10,30 +10,38 @@
 </head>
 
 <body>
-    <div class="nav">
-        <button class="button svg" id="pencil">
-            <!-- <svg fill="rgba(0,0,0, 0.5)" width="4vh" height="8vh" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <title>pencil</title>
-                <path d="M0 32l12-4 20-20-8-8-20 20zM4 28l2.016-5.984 4 4zM8 20l12-12 4 4-12 12z"></path>
-                </svg> -->
-                <svg fill="white" height="4vh" width="4vh" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 306.637 306.637" xml:space="preserve">
-<g>
-	<g>
-		<path d="M12.809,238.52L0,306.637l68.118-12.809l184.277-184.277l-55.309-55.309L12.809,238.52z M60.79,279.943l-41.992,7.896
-			l7.896-41.992L197.086,75.455l34.096,34.096L60.79,279.943z"/>
-		<path d="M251.329,0l-41.507,41.507l55.308,55.308l41.507-41.507L251.329,0z M231.035,41.507l20.294-20.294l34.095,34.095
-			L265.13,75.602L231.035,41.507z"/>
-	</g>
-</g>
-</svg>
-        </button>
-        <div class="button"></div>
-        <div class="button"></div>
+    <div class="paint">
 
+        <div class="sidebar">
+            <button class="button svg" id="pencil" title="Pencil">
+                <img src="./images/pencilla.png" alt="pencil" class="img-tool pencil" >
+            </button>
+            <button class="button svg" title="Eraser">
+                <img src="./images/eraser.png" alt="eraser" class="img-tool eraser">
+            </button>
+            <button class="button svg" title="Attach an image">
+                <img src="./images/attach.png" alt="file-attach" id="upload-image" class="img-tool">
+                <input type="file" name="upload-image" id="upload-image-input" hidden>
+            </button>
+            <button class="button svg" id="wipe" title="Clean Canvas">
+                <img src="./images/cleaning.png" alt="clean-button" class="img-tool">
+            </button>
+            <button class="button svg" title="Apply filters">
+                <img src="./images/star.png" alt="clean-button" class="img-tool">
+            </button>
+            <button class="button svg" title="Download image">
+                <img src="./images/download-image.png" alt="download-folder" class="img-tool">
+            </button>
+
+        </div>
+        
+        <canvas width="800px" height="400px" id="main-canvas"></canvas>
+
+        <div class="tool-settings-bar sidebar">
+            <button id="close-tool-bar-settings" title="Open/Close settings" class="toolbar-settings-button">></button>
+        </div>
     </div>
-    <canvas width="800" height="600"></canvas>
 </body>
-<script src="index.js"></script>
+<script src="index.js" type="module"></script>
 
 </html>

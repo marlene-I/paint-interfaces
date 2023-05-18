@@ -1,10 +1,7 @@
-const pencil = document.getElementById('pencil');
 
-const asd = new Event('someRandomElementUKnow')
+import { Paint } from "./Paint.js";
 
-pencil.addEventListener('click', (e) => {
-    pencil.classList.toggle('active')
-    pencil.dispatchEvent(asd)
-})
 
-pencil.addEventListener('someRandomElementUKnow', e => console.log(e))
+const mainCanvas = document.getElementById('main-canvas');
+
+const paint = new Paint(mainCanvas);

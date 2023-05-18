@@ -1,47 +1,120 @@
-:root{
-    --full-width-without-scrollbars:  calc(100vw - (100vw - 100%));
+:root {
+    --full-width-without-scrollbars: calc(100vw - (100vw - 100%));
+    --sidebar-width: 5vw;
 }
 
 body {
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-canvas{
-    height: 80vh;
-    width: var(--full-width-without-scrollbars);
-    border: 1px solid black;
-}
-
-.nav {
-    background: linear-gradient(30deg,hsla(182, 100%, 67%, 1), hsla(262, 100%, 67%, 1), hsla(222, 100%, 67%, 1), hsla(182, 100%, 67%, 1)) ;
-    width: var(--full-width-without-scrollbars);
-    height: 20vh;
+.paint {
     display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+canvas {
+    position: relative;
+    left: 6%;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1),
+        -5px -5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: start;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1), inset 5px 5px 10px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1), -2px -2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.tool-settings-bar {
+    width: 15vw;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0%;
+    display: block;
 }
 
 .button {
-    background-color: hsla(300, 100%, 25%, 0.9);
-    width: 6vh;
-    height: 6vh;
+    background-color: transparent;
+    width: 8vh;
+    height: 8vh;
     border-radius: 20%;
-    margin-left: 5vh;
+    margin-top: 5vh;
     cursor: pointer;
-    box-shadow: inset 5px 5px 10px 10px rgba(255, 255, 255, 0.1), inset -5px -5px 10px 10px rgba(255, 255, 255, 0.1), 3px 3px 3px 3px hsla(300, 100%, 25%, 0.8);
-    border: 1px solid hsla(300, 100%, 25%, 0.2);
+    border: none;
 }
 
 .button.active {
-    background-color: hsla(300, 100%, 25%, 0.7);
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.8);
-    box-shadow: inset 5px 5px 10px 10px rgba(0, 0, 0, .1), inset -5px -5px 10px 10px rgba(0, 0, 0, .1), 3px 3px 3px 3px hsla(300, 100%, 25%, 0.8);
-
+    background-color: hsla(232, 69%, 62%, 0.265);
 }
 
-.button.svg{
+#wipe.button.active {
+    background-color: transparent;
+}
+
+.pencil {
+    transform: rotate(-45deg);
+    height: 6vh;
+}
+
+.button.svg {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.img-tool {
+    width: 6vh;
+    background-size: contain;
+}
+
+.eraser {
+    transform: rotate(-240deg);
+}
+
+.toolbar-settings-button {
+    border: none;
+    background: transparent;
+    margin: 10px 1px 30px;
+    font-size: 30px;
+    color: hsla(232, 69%, 62%, 1);
+    cursor:pointer;
+}
+
+#upload-image{
+    height: 90%;
+}
+
+.filter-buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+.filter-button{
+    margin: 10px;
+    height: 30px;
+    width: 80%;
+    color: #5839e3d3;
+    background-color: hsla(214, 66%, 77%, 0.31);
+    border-radius: 10px;
+    border: 1px solid rgb(123, 193, 234);
+    cursor:pointer;
+}
+
+.setting-input,
+.setting-label {
+    margin: 3px 3px;
+    width: 80%
+}
+
+.setting-label{
+    margin-top: 15px;
 }
